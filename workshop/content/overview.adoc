@@ -8,24 +8,8 @@
 
 In this lab, you will deploy Red Hat OpenShift Container Platform 4 using the User Provided Infrastructure method onto Red Hat OpenStack. 
 
-// Briefly explain the lab content here
-
-By completing this lab you will achieve the following goals: 
-
-* Learn about the process of OpenShift 4 disconnected installation
-* ....
-* ....
-
 == User Information
 
 Here is your user information:
 
-[source,bash,options="nowrap",subs="{markup-in-source}"]
-----
-Here is some important information about your environment:
-
-Your GUID is: *{USER_GUID}*
-
-Your username is: *{USERNAME}*
-
-----
+%agnosticd_user_info%

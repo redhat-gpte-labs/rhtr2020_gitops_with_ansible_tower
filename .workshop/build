@@ -9,14 +9,9 @@
 # delete it by accident and break the display of the workshop content.
 
 mv workshop /opt/app-root/workshop
+mv envvars /opt/app-root/envvars
 
 # Also delete some of the other files from the top of the Git repository we
 # don't need for running the workshop.
 
-rm -f Dockerfile README.md LICENSE
-
-# If the workshop requires Git, it is necessary to set some defaults for
-# the name and email of the user for Git.
-
-git config --global user.email "pavel.anni@gmail.com"
-git config --global user.name "Pavel Anni"
+rm -f Dockerfile LICENSE README.adoc build-template.yaml deploy*-template.yaml workshop-vars.json

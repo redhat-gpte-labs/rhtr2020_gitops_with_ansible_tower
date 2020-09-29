@@ -1,0 +1,5 @@
+=== Introduction to Automation Webhooks
+
+Automation Webhooks were introduced to Ansible Tower v3.6 as part of the Ansible Automation Platform.
+
+Automation Webhooks allow you to link a Git repository and Ansible automation natively. Once a repo link is set up, Ansible catches events (Git commits) from the Git system (GitHub, GitHub Enterprise, GitLab). It then uses those events to trigger automation jobs to update projects, manage inventories, and perform deployments, all without requiring yet another tool such as Jenkins.

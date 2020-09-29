@@ -1,0 +1,77 @@
+:USERNAME: %username%
+:PASSWORD: %password%
+:GITLAB_URL: %gitlab_url%
+:GITLAB_USERNAME: %gitlab_username%
+:GITLAB_PASSWORD: %gitlab_password%
+:TOWER_URL: %tower_url%
+:TOWER_ADMIN_USER: %tower_admin_user%
+:TOWER_ADMIN_PASSWORD: %tower_admin_password%
+:SSH_COMMAND: %ssh_command%
+:SSH_PASSWORD: %ssh_password%
+:VSCODE_UI_URL: %vscode_ui_url%
+:VSCODE_UI_PASSWORD: %vscode_ui_password%
+:organization_name: Default
+:gitlab_project: ansible/gitops-lab
+:project_prod: Project gitOps - Prod
+:project_test: Project gitOps - Test
+:inventory_prod: GitOps inventory - Prod Env
+:inventory_test: GitOps inventory - Test Env
+:credential_machine: host_credential
+:credential_git: gitlab_credential
+:credential_git_token: gitlab_token 
+:credential_openstack: cloud_credential
+:jobtemplate_prod: App deployer - Prod Env
+:jobtemplate_test: App deployer - Test Env
+:source-linenums-option:        
+:markup-in-source: verbatim,attributes,quotes
+:show_solution: true
+
+
+
+
+=== Explore RedHat Ansible Tower Web UI
+
+
+In this section, you will explore RedHat Ansible Tower Web UI and it's components.
+
+. Use the public IP address or DNS name to access the `tower` node.
+
+. Sign in to the Ansible Tower web UI as the administrator using the *{TOWER_ADMIN_USER}*
+account and *{TOWER_ADMIN_PASSWORD}* as the password.
++
+Open browser and type *{TOWER_URL}*
++
+image::images/01_tower_login_page.png[]
+image::images/02_tower_dashboard.png[]
+
+
+==== Browse Inventory
+
+
+In this section, explore the inventory created during the Ansible Tower installation and determine its managed hosts.
+
+. Under the *RESOURCES* section of the left navigation bar, click *Inventories*.
+* Expect to see an inventory named `{inventory_prod}` and `{inventory_test}` that was created as part of lab setup.
+
+. Click on the both inventories one by one to view the details of the inventories.
+* Under the *GROUPS* section of respective inventories, expect to see that each inventory is composed of groups e.g under `{inventory_test}` *testservers* group.
+
+* To explore further click on group name to list hosts.
+
+==== View Credential Details
+
+In this section, explore the details of the credential created as part of lab setup.
+
+. Under the *RESOURCES* section of the left navigation bar, click *Credentials*.
+
+. Expect to see following credentials -
++
+|===
+| Name | Credential Type | Description
+| gitlab_credential | scm | for project sync 
+| cloud_credential | openstack | for openstack api authentication
+| host_credential | machine | for ssh username and key to connect hosts
+|===
+
+. Click on credentials one by one to view the details of the credentials.
+

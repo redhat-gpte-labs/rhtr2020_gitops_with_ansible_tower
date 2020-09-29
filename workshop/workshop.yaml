@@ -1,9 +1,11 @@
 ---
-name: Bookbag Template
+name: GitOps with RedHat Ansible Tower
 modules:
   activate:
-    - overview
-    - prepare-environment
-    - exercises
-    - cleanup
-    - solving-resetting
+    - introduction
+    - iac
+    - iac_ansible
+    - webhooks
+    - goals 
+    - explore_control
+    - explore_tower

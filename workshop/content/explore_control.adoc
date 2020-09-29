@@ -1,0 +1,66 @@
+:USERNAME: %username%
+:PASSWORD: %password%
+:GITLAB_URL: %gitlab_url%
+:GITLAB_USERNAME: %gitlab_username%
+:GITLAB_PASSWORD: %gitlab_password%
+:TOWER_URL: %tower_url%
+:TOWER_ADMIN_USER: %tower_admin_user%
+:TOWER_ADMIN_PASSWORD: %tower_admin_password%
+:SSH_COMMAND: %ssh_command%
+:SSH_PASSWORD: %ssh_password%
+:VSCODE_UI_URL: %vscode_ui_url%
+:VSCODE_UI_PASSWORD: %vscode_ui_password%
+:organization_name: Default
+:gitlab_project: ansible/gitops-lab
+:project_prod: Project gitOps - Prod
+:project_test: Project gitOps - Test
+:inventory_prod: GitOps inventory - Prod Env
+:inventory_test: GitOps inventory - Test Env
+:credential_machine: host_credential
+:credential_git: gitlab_credential
+:credential_git_token: gitlab_token
+:credential_openstack: cloud_credential
+:jobtemplate_prod: App deployer - Prod Env
+:jobtemplate_test: App deployer - Test Env
+:source-linenums-option:
+:markup-in-source: verbatim,attributes,quotes
+:show_solution: true
+
+
+=== Explore Control Node
+
+In this section you will check the connection to `control` node and familiarize yourself with lab enviorment. 
+
+. To login on control node.
+
+. Open the browser and access VScode UI URL: *{VSCODE_UI_URL}* .
+
+. Enter the password shared *{VSCODE_UI_PASSWORD}* .
+
+. From the *Top Menu*, select *Terminal* and click *New Terminal*. 
+
+. At the bootom of your browser you will see *Terminal*, logged in as *devops* user.
+
+. List all nodes available in your environment. 
+
+[NOTE]
+For Copy/Paste you have to allow pop up.
+
++
+[source,textinfo]
+----
+[devops@control ~]$ ansible all --list-hosts
+----
++
+.Sample output
+[source,text]
+----
+ hosts (7):
+    tower.example.com
+    app1.example.com
+    app2.example.com
+    utility.example.com
+    appdb.example.com
+    frontend.example.com
+    testserver.example.com
+----

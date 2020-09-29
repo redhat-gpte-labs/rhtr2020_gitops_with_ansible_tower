@@ -1,0 +1,9 @@
+=== Understanding Infrastructures-as-Code
+
+Infrastructure-as-Code (IaC) means managing and provisioning computing resources through human-readable and machine-consumable definition files, rather than using physical hardware configuration or interactive configuration tools.
+
+It is considered one of the essential practices of DevOps, along with continuous integration (CI), continuous delivery (CD), observability, and others. DevOps automates development and operations processes and creates a faster release cycle with higher quality.
+
+Ansible is a prime example of a tool that enables organizations to apply IaC techniques to their DevOps workflow.
+
+As an Ansible user, you define the desired state of your infrastructure — servers, cloud resources, networking — by using playbooks and roles that are expressed in YAML. 

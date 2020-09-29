@@ -18,8 +18,8 @@
 
 # Flags to explicitly enable/disable specific components
 ENABLE_CONSOLE='false'
-#ENABLE_DASHBOARD='false'
-#ENABLE_SLIDES='false'
+ENABLE_DASHBOARD='true'
+ENABLE_SLIDES='true'
 ENABLE_TERMINAL='false'
 #ENABLE_WEBDAV='false'
-#ENABLE_WORKSHOP='true'
+ENABLE_WORKSHOP='true'

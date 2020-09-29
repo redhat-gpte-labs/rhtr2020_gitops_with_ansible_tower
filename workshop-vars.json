@@ -1,0 +1,14 @@
+{ 
+"username": "devops",
+"password": "test",
+"gitlab_url": "utility.test.example.com",
+"gitlab_username": "devops",
+"gitlab_password": "test",
+"tower_url": "https://tower.example.com",
+"tower_admin_user": "devops",
+"tower_admin_password": "test",
+"ssh_command": "ssh tower.example.com",
+"ssh_password": "{{ student_password }}",
+"vscode_ui_url": "http:kjsfksj",
+"vscode_ui_password": "ksjfksdjf"
+}

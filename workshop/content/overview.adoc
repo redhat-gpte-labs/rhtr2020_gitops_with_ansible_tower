@@ -1,5 +1,5 @@
 :USERNAME: %username%
-:PASSEORD: %password%
+:PASSWORD: %password%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -40,26 +40,49 @@ Here is your user information:
 
 
 {USERNAME}
+
 {PASSEORD}
+
 {GITLAB_URL}
+
 {GITLAB_USERNAME}
+
 {GITLAB_PASSWORD}
+
 {TOWER_URL}
+
 {TOWER_ADMIN_USER}
+
 {TOWER_ADMIN_PASSWORD}
+
 {SSH_COMMAND}
+
 {SSH_PASSWORD}
+
 {VSCODE_UI_URL}
+
 {VSCODE_UI_PASSWORD}
+
 {organization_name}
+
 {gitlab_project}
+
 {project_prod}
+
 {project_test}
+
 {inventory_prod}
+
 {inventory_test}
+
 {credential_machine}
+
 {credential_git}
+
 {credential_git_token} 
+
 {credential_openstack}
+
 {jobtemplate_prod}
+
 {jobtemplate_test}

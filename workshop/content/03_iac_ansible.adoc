@@ -1,4 +1,4 @@
-=== Understanding an IaC Ansible pipeline
+
 
 If you are treating your infrastructure as code, then you need a source control system. These days, when it comes to source control, we're talking about Git, the distributed source control system that has become the de facto standard in the space.
 

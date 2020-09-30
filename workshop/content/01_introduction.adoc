@@ -1,4 +1,4 @@
-== GitOps with Red Hat Ansible Tower
+
 
 In this labs you will be implementing effective GitOps workflows with the Red Hat Ansible Automation Platform using the webhooks capabilities in Ansible Tower. 
 

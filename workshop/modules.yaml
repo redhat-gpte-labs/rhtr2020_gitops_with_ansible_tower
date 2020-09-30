@@ -1,23 +1,38 @@
 ---
 modules:
-  introduction:
+  01_introduction:
     name: GitOps with RedHat Ansible Tower
     exit_sign: Understanding Infrastructures-as-Code
-  iac:
+  02_iac:
     name: Understanding Infrastructures-as-Code
     exit_sign: Understanding an IaC Ansible pipeline
-  iac_ansible:
+  03_iac_ansible:
     name: Understanding an IaC Ansible pipeline
     exit_sign: Introduction to Automation Webhooks
-  webhooks:
+  04_webhooks:
     name: Introduction to Automation Webhooks
     exit_sign: Goals
-  goals:
+  05_goals:
     name: Goals
     exit_sign: Explore Control Node
-  explore_control:
+  06_explore_control:
     name: Explore Control Node
     exit_sign: Explore RedHat Ansible Tower Web UI
-  explore_tower:
+  07_explore_tower:
     name: Explore RedHat Ansible Tower Web UI
     exit_sign: Explore Gitlab Web UI
+  08_explore_gitlab:
+    name: Explore Gitlab Web UI
+    exit_sign: Create Gitlab personal access token
+  09_gitlab_pat:
+    name: Create Gitlab personal access token
+    exit_sign: Prepare Tower to use GitLab Personal Access Token
+  10_tower_gitlab_pat_cred: 
+    name: Prepare Tower to use GitLab Personal Access Token
+    exit_sign: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Push Request
+  11_webhook_push_request:
+    name: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Push Request
+    exit_sign: Verify Push Request webhook
+  12_verify_push_request:
+    name: Verify Push Request wehook
+    exit_sign: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Merge Request

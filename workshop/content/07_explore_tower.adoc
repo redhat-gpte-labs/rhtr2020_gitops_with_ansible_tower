@@ -1,5 +1,5 @@
-:USERNAME: %username%
-:PASSWORD: %password%
+:GUID: %guid%
+:OSP_DOMAIN: %osp_cluster_dns_zone%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -27,11 +27,6 @@
 :show_solution: true
 
 
-
-
-=== Explore RedHat Ansible Tower Web UI
-
-
 In this section, you will explore RedHat Ansible Tower Web UI and it's components.
 
 . Use the public IP address or DNS name to access the `tower` node.
@@ -45,7 +40,7 @@ image::images/01_tower_login_page.png[]
 image::images/02_tower_dashboard.png[]
 
 
-==== Browse Inventory
+== Browse Inventory
 
 
 In this section, explore the inventory created during the Ansible Tower installation and determine its managed hosts.
@@ -58,7 +53,7 @@ In this section, explore the inventory created during the Ansible Tower installa
 
 * To explore further click on group name to list hosts.
 
-==== View Credential Details
+== View Credential Details
 
 In this section, explore the details of the credential created as part of lab setup.
 

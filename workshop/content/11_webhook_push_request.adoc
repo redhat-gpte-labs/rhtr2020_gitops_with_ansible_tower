@@ -1,0 +1,250 @@
+:GUID: %guid%
+:OSP_DOMAIN: %osp_cluster_dns_zone%
+:GITLAB_URL: %gitlab_url%
+:GITLAB_USERNAME: %gitlab_username%
+:GITLAB_PASSWORD: %gitlab_password%
+:TOWER_URL: %tower_url%
+:TOWER_ADMIN_USER: %tower_admin_user%
+:TOWER_ADMIN_PASSWORD: %tower_admin_password%
+:SSH_COMMAND: %ssh_command%
+:SSH_PASSWORD: %ssh_password%
+:VSCODE_UI_URL: %vscode_ui_url%
+:VSCODE_UI_PASSWORD: %vscode_ui_password%
+:organization_name: Default
+:gitlab_project: ansible/gitops-lab
+:project_prod: Project gitOps - Prod
+:project_test: Project gitOps - Test
+:inventory_prod: GitOps inventory - Prod Env
+:inventory_test: GitOps inventory - Test Env
+:credential_machine: host_credential
+:credential_git: gitlab_credential
+:credential_git_token: gitlab_token 
+:credential_openstack: cloud_credential
+:jobtemplate_prod: App deployer - Prod Env
+:jobtemplate_test: App deployer - Test Env
+:source-linenums-option:        
+:markup-in-source: verbatim,attributes,quotes
+:show_solution: true
+
+
+
+
+
+== Modify Job Template to enable Webhooks
+
+In this section, you will modify Job Template *{jobtemplate_test}* to enable webhooks.
+
+. Sign in to the Ansible Tower web UI.
+
+. In the *RESOURCES* section of this navigation menu, click *Templates*.
+
+. Click *{jobtemplate_test}* to modify.
+
+. On the next screen, complete the following fields with these values:
+
+* Select *ENABLE WEBHOOK* from *OPTIONS* at the bottom of job template form. 
+
+.. Complete the following fields with these values-
+* *WEBHOOK SERVICE*: `GitLab`
+* *WEBHOOK URL*: `Auto Generated`
+* *WEBHOOK CREDENTIAL*: `{credential_git_token}`
+* *WEBHOOK KEY*: `Auto Generated when you click *SAVE* button`
+
+. Click *SAVE* to create the job template.
+
+
+
+== Preparing Gitlab repo webhook for Push Request.
+
+. Sign In to Gitlab web UI.
+
+. Open the browser and type *{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAME}` and `{GITLAB_USERNAME}`, as provided.
+
+. Select Project *{gitlab_project}*. 
+
+. On *Project Overview* menu hover over *Settings* to select *Webhooks*.
+
+.. Complete the following fields with these values-
+* *URL*: `*Webhook URL* from Red Hat Ansible Tower job template {jobtemplate_test}`
+* *Secret Token*: `*Webhook Key* from Red Hat Ansible Tower job template {jobtemplate_test}`
+* *Push events*: `Select checkbox and specify *test* as branch name`
+* *Enable SSL verification*: `Uncheck checkbox`
+. Leave the other fields unchanged and click *Add webhook* to create the webhook.
+
+== Push Changes to Gitlab Repo 
+
+. On your browser tab open gitlab webUI using *Gitlab URL* and sign in with *Gitlab Username* and *Gitlab Password*.
+
+. Select *{gitlab_project}*. 
+
+. Click on *Clone* dropdown and copy *Clone with SSH* uri.
+
+. On one of the browser tab connect to the control node with *{VSCODE_UI_URL}* and *{VSCODE_UI_PASSWORD}*.
+
+. Open the terminal and connect as *devops* user.
+
+. Run git command to clone repository on *control* node.
+
+. On the other tab open gitlab webUI using *{GITLAB_URL}* and sign in with *{GITLAB_USERNAME}* and *{GITLAB_PASSWORD}*.
+
+. Select *{gitlab_project}*. 
+
+. Click on *Clone* dropdown and copy *Clone with SSH* uri.
+
++
+[source,bash,subs="attributes,verbatim"]
+----
+[devops@control 0 ~]$ cd $HOME
+[devops@control 0 ~]$ git clone git@utility.{GUID}.{OSP_DOMAIN}:ansible/gitops-lab.git
+----
+
+. Sample Output
+
++
+[source,bash,subs="attributes,verbatim"]
+----
+Cloning into 'gitops-lab'...
+Warning: Permanently added 'utility.{GUID}.{OSP_DOMAIN},169.47.191.71' (ECDSA) to the list of known hosts.
+remote: Enumerating objects: 258, done.
+remote: Counting objects: 100% (258/258), done.
+remote: Compressing objects: 100% (110/110), done.
+remote: Total 258 (delta 116), reused 258 (delta 116), pack-reused 0
+Receiving objects: 100% (258/258), 236.04 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (116/116), done.
+----
+
+. Change into directory `$HOME/gitops-lab`.
+
++
+[source,bash]
+----
+devops@control 0 ~]$ cd $HOME/gitops-lab
+[devops@control 0 ~/gitops-lab test ⭑|✔]$
+----
+
+. Populate content of `site.yml` with the following content.
+
++
+----
+[devops@control 0 ~$] cat << EOF >  $HOME/gitops-lab/site.yml
+---
+
+- name: Play to setup mysql server
+  hosts: appdbs
+  tasks:
+    - debug: 
+        msg: "Start Mysql server setup"
+
+    - name: Setup firewall
+      include_role:
+        name: firewall
+      vars:
+        firewall_services:
+          - mysql
+
+    - name: Setup mysql server
+      include_role:
+        name: mysql-server
+    
+    - debug: 
+        msg: "Finished Mysql server setup"
+ 
+- name: Play to setup apache servers
+  hosts: apps
+  tasks:
+    - debug: 
+      msg: "Start Apache server setup"
+    
+    - name: Setup firewall
+      include_role:
+        name: firewall
+      vars:
+        firewall_services:
+          - http
+        firewall_tcp_ports:
+          - 8080
+
+    - name: Setup apache server
+      include_role:
+        name: apache
+    
+    - debug: 
+        msg: "Finished Apache server setup"
+
+- name: Play to setup Haproxy
+  hosts: frontends
+  tasks:
+    - debug: 
+      msg: "Start HAproxy server setup"
+
+    - name: Setup firewall
+      include_role:
+        name: firewall
+      vars:
+        firewall_services:
+          - http
+        firewall_tcp_ports:
+          - 5000
+
+    - name: Setup HAproxy server
+      include_role:
+        name: haproxy
+
+    - debug: 
+      msg: "Finished HAproxy server setup"
+
+...
+EOF
+----
+
+. Add the changes to gitlab repo.
+
++
+[source,bash]
+----
+[devops@control 0 ~]$ git add site.yml
+----
+
+. Commit the changes.
+
++
+[source,bash]
+----
+devops@control 0 ~]$ git commit -m "Populated site.yml with playbook content"
+----
+
+. Sample Output
+
++
+[source,bash]
+----
+[test 09468a2] Populated site.yml with playbook content
+ 1 file changed, 67 insertions(+)
+ create mode 100644 site.yml
+----
+
+. Push the changes
+
++
+[source,bash,subs="attributes,verbatim"]
+----
+[devops@control 0 ~]$ git push
+----
+
+. Sample Output
+
++
+----
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 581 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: 
+remote: To create a merge request for test, visit:
+remote:   {GITLAB_URL}/ansible/gitops-lab/-/merge_requests/new?merge_request%5Bsource_branch%5D=test
+remote: 
+To git@utility.{GUID}.{OSP_DOMAIN}:ansible/gitops-lab.git
+   223ba25..09468a2  test -> test
+----
+ss

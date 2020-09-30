@@ -1,5 +1,5 @@
-:USERNAME: %username%
-:PASSWORD: %password%
+:GUID: %guid%
+:OSP_DOMAIN: %osp_cluster_dns_zone%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -18,16 +18,14 @@
 :inventory_test: GitOps inventory - Test Env
 :credential_machine: host_credential
 :credential_git: gitlab_credential
-:credential_git_token: gitlab_token
+:credential_git_token: gitlab_token 
 :credential_openstack: cloud_credential
 :jobtemplate_prod: App deployer - Prod Env
 :jobtemplate_test: App deployer - Test Env
-:source-linenums-option:
+:source-linenums-option:        
 :markup-in-source: verbatim,attributes,quotes
 :show_solution: true
 
-
-=== Explore Control Node
 
 In this section you will check the connection to `control` node and familiarize yourself with lab enviorment. 
 

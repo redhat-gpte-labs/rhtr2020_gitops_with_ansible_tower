@@ -1,4 +1,4 @@
-=== Understanding Infrastructures-as-Code
+
 
 Infrastructure-as-Code (IaC) means managing and provisioning computing resources through human-readable and machine-consumable definition files, rather than using physical hardware configuration or interactive configuration tools.
 

@@ -1,4 +1,4 @@
-== Goals
+
 * Learn creating RedHat Ansible Tower resources.
 * Learn deploying application on test server manually.
 * Learn setting up Gitlab for Automation webhooks.

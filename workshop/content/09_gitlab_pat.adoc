@@ -1,0 +1,47 @@
+:GUID: %guid%
+:OSP_DOMAIN: %osp_cluster_dns_zone%
+:GITLAB_URL: %gitlab_url%
+:GITLAB_USERNAME: %gitlab_username%
+:GITLAB_PASSWORD: %gitlab_password%
+:TOWER_URL: %tower_url%
+:TOWER_ADMIN_USER: %tower_admin_user%
+:TOWER_ADMIN_PASSWORD: %tower_admin_password%
+:SSH_COMMAND: %ssh_command%
+:SSH_PASSWORD: %ssh_password%
+:VSCODE_UI_URL: %vscode_ui_url%
+:VSCODE_UI_PASSWORD: %vscode_ui_password%
+:organization_name: Default
+:gitlab_project: ansible/gitops-lab
+:project_prod: Project gitOps - Prod
+:project_test: Project gitOps - Test
+:inventory_prod: GitOps inventory - Prod Env
+:inventory_test: GitOps inventory - Test Env
+:credential_machine: host_credential
+:credential_git: gitlab_credential
+:credential_git_token: gitlab_token 
+:credential_openstack: cloud_credential
+:jobtemplate_prod: App deployer - Prod Env
+:jobtemplate_test: App deployer - Test Env
+:source-linenums-option:        
+:markup-in-source: verbatim,attributes,quotes
+:show_solution: true
+
+In this section, you will create Gitlab personal access token.
+
+. Sign In to Gitlab web UI.
+
+. Open the browser and type *{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAME}` and `{GITLAB_PASSWORD}`, as provided.
+
+. In the upper-right corner, click your *avatar* and select *Settings*.
+
+. On the *User Settings* menu, select *Access Tokens*.
+
+. Enter the name *Gitops Lab* and optional expiry date for the token.
+
+. Choose the *desired scopes*. For the Webhook Purpose you need to only check the boxes beside *read_api* and *read_repository*.
+
+. For more information regarding *desired scopes* refer link:https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#limiting-scopes-of-a-personal-access-token[desired scopes] .
+
+. Click the Create personal access token button.
+
+. Save the personal access token somewhere safe. If you navigate away or refresh your page, and you did not save the token, you must create a new one.

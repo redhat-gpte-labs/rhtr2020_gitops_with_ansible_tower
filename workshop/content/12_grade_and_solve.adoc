@@ -26,39 +26,18 @@
 :markup-in-source: verbatim,attributes,quotes
 :show_solution: true
 
+. Sign in to Red Hat Ansible tower Web UI *{TOWER_URL}* as `{TOWER_ADMIN_USER}` user and password `{TOWER_ADMIN_PASSWORD}`.
 
-In this section you will check the connection to `control` node and familiarize yourself with lab enviorment. 
+. On the left side pane select *Jobs*.
 
-. To login on control node.
+. You will be able to see job `$JOBID-App Deployer - Test Env` ruuning. 
 
-. Open the browser and access VScode UI URL: *{VSCODE_UI_URL}* .
+. You will be to see job has been executed with *Playbook Run* *Webhook* action. 
 
-. Enter the password shared *{VSCODE_UI_PASSWORD}* .
+. Click on the `$JOBID-App Deployer - Test Env` to see the details. 
 
-. From the *Top Menu*, select *Terminal* and click *New Terminal*. 
+. Verify accessing the application using testserver web url `testserver.{GUID}.{OSP_DOMAIN}`.
 
-. At the bootom of your browser you will see *Terminal*, logged in as *devops* user.
+//Image
 
-. List all nodes available in your environment. 
-
-[NOTE]
-For Copy/Paste you have to allow pop up.
-
-+
-[source,textinfo]
-----
-[devops@control ~]$ ansible all --list-hosts
-----
-+
-.Sample output
-[source,text]
-----
- hosts (7):
-    tower.example.com
-    app1.example.com
-    app2.example.com
-    utility.example.com
-    appdb.example.com
-    frontend.example.com
-    testserver.example.com
-----
+. Enter `root` in the box to then click `Submit`. 

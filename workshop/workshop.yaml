@@ -11,3 +11,6 @@ modules:
     - 07_tower_gitlab_pat_cred
     - 08_webhook_push_request
     - 09_verify_push_request
+    - 10_webhook_merge_request
+    - 11_verify_merge_request
+    - 12_grade_and_solve

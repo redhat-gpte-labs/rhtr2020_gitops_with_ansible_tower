@@ -1,5 +1,5 @@
 :GUID: %guid%
-:OSP_DOMAIN: %subdomain_base_suffixe%
+:OSP_DOMAIN: %subdomain_base_suffix%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -36,8 +36,10 @@ account and *{TOWER_ADMIN_PASSWORD}* as the password.
 +
 Open browser and type *{TOWER_URL}*
 +
-image::images/01_tower_login_page.png[]
-image::images/02_tower_dashboard.png[]
+*Image-1*
+
+image::images/04_tower_login.png[align="center",600,300]
+
 
 
 == Browse Inventory
@@ -69,4 +71,6 @@ In this section, explore the details of the credential created as part of lab se
 |===
 
 . Click on credentials one by one to view the details of the credentials.
+*Image-2*
 
+image::images/04_tower_credentials.png[align="center",600,300]

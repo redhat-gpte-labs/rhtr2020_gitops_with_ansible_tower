@@ -25,5 +25,13 @@ modules:
     name: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Push Request
     exit_sign: Verify Push Request webhook
   09_verify_push_request:
-    name: Verify Push Request wehook
+    name: Verify Push Request webhook
     exit_sign: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Merge Request
+  10_webhook_merge_request:
+    name: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Merge Request
+    exit_sign: Verfiy merge request webhook
+  11_verify_merge_request:
+    name: Verfiy merge request webhook
+    exit_sign: Grade and solve
+  12_grade_and_solve:
+    name: Grade and solve

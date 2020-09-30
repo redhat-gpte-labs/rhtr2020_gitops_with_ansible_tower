@@ -1,5 +1,5 @@
 :GUID: %guid%
-:OSP_DOMAIN: %subdomain_base_suffixe%
+:OSP_DOMAIN: %subdomain_base_suffix%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -42,3 +42,7 @@ In this section, you will create  `GitLab Personal Access Token` credential requ
 * *TYPE*: `GitLab Personal Access Token`
 * *TOKEN*: `Copy token from gitlab webui`
 * Click *SAVE* to create the credential.
+
+*Image-1*
+
+image::images/03_gitlab_pat_2.png[align="center",600,300]

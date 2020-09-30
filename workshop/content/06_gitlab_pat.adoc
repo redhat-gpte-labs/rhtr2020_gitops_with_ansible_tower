@@ -1,5 +1,5 @@
 :GUID: %guid%
-:OSP_DOMAIN: %subdomain_base_suffixe%
+:OSP_DOMAIN: %subdomain_base_suffix%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -45,3 +45,11 @@ In this section, you will create Gitlab personal access token.
 . Click the Create personal access token button.
 
 . Save the personal access token somewhere safe. If you navigate away or refresh your page, and you did not save the token, you must create a new one.
+
+*Image-1*
+
+image::images/03_gitlab_pat_1.png[align="center",600,300]
+
+*Image-2*
+
+image::images/03_gitlab_pat_2.png[align="center",600,300]

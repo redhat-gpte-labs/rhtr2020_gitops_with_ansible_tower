@@ -1,5 +1,5 @@
-:USERNAME: %username%
-:PASSWORD: %password%
+:GUID: %guid%
+:OSP_DOMAIN: %subdomain_base_suffix%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -26,63 +26,18 @@
 :markup-in-source: verbatim,attributes,quotes
 :show_solution: true
 
+. Sign in to Red Hat Ansible tower Web UI *{TOWER_URL}* as `{TOWER_ADMIN_USER}` user and password `{TOWER_ADMIN_PASSWORD}`.
 
+. On the left side pane select *Jobs*.
 
+. You will be able to see job `$JOBID-App Deployer - Test Env` ruuning. 
 
+. You will be to see job has been executed with *Playbook Run* *Webhook* action. 
 
-== Overview
+. Click on the `$JOBID-App Deployer - Test Env` to see the details. 
 
-In this lab, you will deploy Red Hat OpenShift Container Platform 4 using the User Provided Infrastructure method onto Red Hat OpenStack. 
+. Verify accessing the application using testserver web url `testserver.{GUID}.{OSP_DOMAIN}`.
 
-== User Information
+//Image
 
-Here is your user information:
-
-
-{USERNAME}
-
-{PASSEORD}
-
-{GITLAB_URL}
-
-{GITLAB_USERNAME}
-
-{GITLAB_PASSWORD}
-
-{TOWER_URL}
-
-{TOWER_ADMIN_USER}
-
-{TOWER_ADMIN_PASSWORD}
-
-{SSH_COMMAND}
-
-{SSH_PASSWORD}
-
-{VSCODE_UI_URL}
-
-{VSCODE_UI_PASSWORD}
-
-{organization_name}
-
-{gitlab_project}
-
-{project_prod}
-
-{project_test}
-
-{inventory_prod}
-
-{inventory_test}
-
-{credential_machine}
-
-{credential_git}
-
-{credential_git_token} 
-
-{credential_openstack}
-
-{jobtemplate_prod}
-
-{jobtemplate_test}
+. Enter `root` in the box to then click `Submit`. 

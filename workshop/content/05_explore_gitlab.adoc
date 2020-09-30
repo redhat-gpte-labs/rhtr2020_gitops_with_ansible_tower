@@ -1,5 +1,5 @@
 :GUID: %guid%
-:OSP_DOMAIN: %subdomain_base_suffixe%
+:OSP_DOMAIN: %subdomain_base_suffix%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -31,3 +31,8 @@ In this section you will explore Gitlab UI.
 . Sign in to Gitlab web UI.
 +
 Open browser and type *{{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAME}` and `{GITLAB_PASSWORD}`, as provided.
+
+
+*Image-1*
+
+image::images/03_gitlab_login.png[align="center",600,300]

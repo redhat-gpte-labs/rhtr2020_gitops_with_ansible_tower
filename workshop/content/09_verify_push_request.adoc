@@ -1,5 +1,5 @@
 :GUID: %guid%
-:OSP_DOMAIN: %subdomain_base_suffixe%
+:OSP_DOMAIN: %subdomain_base_suffix%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -41,3 +41,7 @@
 //Image
 
 . Enter `root` in the box to then click `Submit`. 
+
+*Image-1*
+
+image::images/04_tower_job_status.png[align="center",600,300]

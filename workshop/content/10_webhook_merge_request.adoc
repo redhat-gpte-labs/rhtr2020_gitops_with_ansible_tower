@@ -52,9 +52,7 @@ In this section, you will modify Job Template *{jobtemplate_test}* to enable web
 
 . Click *SAVE* to create the job template.
 
-*Image-1*
 
-image::images/04_tower_webhook.png[align="center",600,300]
 
 == Preparing Gitlab repo webhook for Push Request.
 
@@ -72,11 +70,6 @@ image::images/04_tower_webhook.png[align="center",600,300]
 * *Push events*: `Select checkbox and specify *test* as branch name`
 * *Enable SSL verification*: `Uncheck checkbox`
 . Leave the other fields unchanged and click *Add webhook* to create the webhook.
-
-*Image-2*
-
-image::images/03_gitlab_webhook.png[align="center",600,300]
-
 
 == Push Changes to Gitlab Repo 
 
@@ -254,4 +247,11 @@ remote:
 To git@utility.{GUID}.{OSP_DOMAIN}:ansible/gitops-lab.git
    223ba25..09468a2  test -> test
 ----
-ss
+
+
+
+*Image-1*
+
+image::images/03_gitlab_merge_1.png[align="center",600,300]
+image::images/03_gitlab_merge_2.png[align="center",600,300]
+image::images/03_gitlab_merge_3.png[align="center",600,300]

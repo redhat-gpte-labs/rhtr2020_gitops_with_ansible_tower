@@ -1,5 +1,0 @@
-
-
-If you are treating your infrastructure as code, then you need a source control system. These days, when it comes to source control, we're talking about Git, the distributed source control system that has become the de facto standard in the space.
-
-With Git for source control and Ansible to manage the state of your infrastructure, then all that is missing is the ability to automate what's in a repository and having Ansible apply the configurations to your infrastructure.

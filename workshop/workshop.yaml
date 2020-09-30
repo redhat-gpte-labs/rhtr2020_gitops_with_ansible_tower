@@ -3,14 +3,11 @@ name: GitOps with RedHat Ansible Tower
 modules:
   activate:
     - 01_introduction
-    - 02_iac
-    - 03_iac_ansible
-    - 04_webhooks
-    - 05_goals 
-    - 06_explore_control
-    - 07_explore_tower
-    - 08_explore_gitlab
-    - 09_gitlab_pat
-    - 10_tower_gitlab_pat_cred
-    - 11_webhook_push_request
-    - 12_verify_push_request
+    - 02_overview 
+    - 03_explore_control
+    - 04_explore_tower
+    - 05_explore_gitlab
+    - 06_gitlab_pat
+    - 07_tower_gitlab_pat_cred
+    - 08_webhook_push_request
+    - 09_verify_push_request

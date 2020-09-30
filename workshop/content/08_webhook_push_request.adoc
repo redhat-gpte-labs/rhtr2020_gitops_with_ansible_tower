@@ -54,7 +54,7 @@ In this section, you will modify Job Template *{jobtemplate_test}* to enable web
 
 *Image-1*
 
-image::images/04_tower_webhook.png[align="center",600,300]
+image::images/04_tower_webhook.png[align="center",800,400]
 
 == Preparing Gitlab repo webhook for Push Request.
 
@@ -75,7 +75,7 @@ image::images/04_tower_webhook.png[align="center",600,300]
 
 *Image-2*
 
-image::images/03_gitlab_webhook.png[align="center",600,300]
+image::images/03_gitlab_webhook.png[align="center",800,400]
 
 
 == Push Changes to Gitlab Repo 

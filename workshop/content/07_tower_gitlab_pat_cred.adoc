@@ -45,4 +45,4 @@ In this section, you will create  `GitLab Personal Access Token` credential requ
 
 *Image-1*
 
-image::images/03_gitlab_pat_2.png[align="center",600,300]
+image::images/03_gitlab_pat_2.png[align="center",800,400]

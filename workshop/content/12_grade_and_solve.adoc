@@ -26,18 +26,65 @@
 :markup-in-source: verbatim,attributes,quotes
 :show_solution: true
 
-. Sign in to Red Hat Ansible tower Web UI *{TOWER_URL}* as `{TOWER_ADMIN_USER}` user and password `{TOWER_ADMIN_PASSWORD}`.
+== Grade your work
 
-. On the left side pane select *Jobs*.
+. On one of the browser tab connect to the control node with *{VSCODE_UI_URL}* and *{VSCODE_UI_PASSWORD}*.
 
-. You will be able to see job `$JOBID-App Deployer - Test Env` ruuning. 
+. Open the terminal and connect as *devops* user.
 
-. You will be to see job has been executed with *Playbook Run* *Webhook* action. 
+. Run grade_lab command.
++
+[source,bash,subs="attributes,verbatim"]
+----
+[devops@control 0 ~]$ grade_lab gitops_with_ansible_tower 01  devops
+----
 
-. Click on the `$JOBID-App Deployer - Test Env` to see the details. 
+. Sample Output
 
-. Verify accessing the application using testserver web url `testserver.{GUID}.{OSP_DOMAIN}`.
++
+[source,bash,subs="attributes,verbatim"]
+----
+Starting grade_lab Process
 
-//Image
+Course name: gitops_with_ansible_tower
+Lab number: 01
 
-. Enter `root` in the box to then click `Submit`. 
+Student id: 
+
+PASS:  control.example.com            Check if gitlab project repo has 2 webhooks
+PASS:  control.example.com            Check if Ansible Tower has gitlab token credential
+PASS:  control.example.com            Check if 'App deployer - Test Env' Job template has webhook enabled
+PASS:  control.example.com            Check if 'App deployer - Prod Env' Job template has webhook enabled
+PASS:  control.example.com            Check if Test Env website is accessible
+PASS:  control.example.com            Check if Prod Env website is accessible
+fd48e6457367b7c090e9ea5c30de94701146bda5df829456ad5730bfe0c3f1ba  grading_report.txt
+
+SUCCESS 0 Errors
+
+
+Grading Report:        /tmp/grading_dir/grading_report.txt
+Grading Log (ansible): /tmp/ansible_grading.log
+
+Finished grade_lab Process
+----
+
+== Run solver
+
+. On one of the browser tab connect to the control node with *{VSCODE_UI_URL}* and *{VSCODE_UI_PASSWORD}*.
+
+. Open the terminal and connect as *devops* user.
+
+. Run solve_lab command.
++
+[source,bash,subs="attributes,verbatim"]
+----
+[devops@control 0 ~]$ solve_lab gitops_with_ansible_tower 01
+----
+
+. Sample Output
+
++
+[source,bash,subs="attributes,verbatim"]
+----
+
+----

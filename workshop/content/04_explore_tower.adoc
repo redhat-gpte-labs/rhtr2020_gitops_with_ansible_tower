@@ -38,7 +38,7 @@ Open browser and type *{TOWER_URL}*
 +
 *Image-1*
 
-image::images/04_tower_login.png[align="center",600,300]
+image::images/04_tower_login.png[align="center",800,400]
 
 
 
@@ -73,4 +73,4 @@ In this section, explore the details of the credential created as part of lab se
 . Click on credentials one by one to view the details of the credentials.
 *Image-2*
 
-image::images/04_tower_credentials.png[align="center",600,300]
+image::images/04_tower_credentials.png[align="center",800,400]

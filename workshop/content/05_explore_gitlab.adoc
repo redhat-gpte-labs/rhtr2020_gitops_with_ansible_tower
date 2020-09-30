@@ -35,4 +35,4 @@ Open browser and type *{{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAM
 
 *Image-1*
 
-image::images/03_gitlab_login.png[align="center",600,300]
+image::images/03_gitlab_login.png[align="center",800,400]

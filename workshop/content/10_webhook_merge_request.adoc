@@ -28,37 +28,32 @@
 
 
 
-
-
 == Modify Job Template to enable Webhooks
 
-In this section, you will modify Job Template *{jobtemplate_test}* to enable webhooks.
+In this section, you will modify Job Template *{jobtemplate_prod}* to enable webhooks.
 
 . Sign in to the Ansible Tower web UI.
 
 . In the *RESOURCES* section of this navigation menu, click *Templates*.
 
-. Click *{jobtemplate_test}* to modify.
+. Click *{jobtemplate_prod}* to modify.
 
 . On the next screen, complete the following fields with these values:
-
 * Select *ENABLE WEBHOOK* from *OPTIONS* at the bottom of job template form. 
 
 .. Complete the following fields with these values-
 * *WEBHOOK SERVICE*: `GitLab`
-* *WEBHOOK URL*: `Auto Generated`
 * *WEBHOOK CREDENTIAL*: `{credential_git_token}`
-* *WEBHOOK KEY*: `Auto Generated when you click *SAVE* button`
+* *WEBHOOK URL*: `Auto Generated`
+* *WEBHOOK KEY*: `Auto Generated when you press *SAVE* button`
 
 . Click *SAVE* to create the job template.
 
-
-
-== Preparing Gitlab repo webhook for Push Request.
+== Preparing Gitlab repo webhook for Merge Request.
 
 . Sign In to Gitlab web UI.
 
-. Open the browser and type *{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAME}` and `{GITLAB_USERNAME}`, as provided.
+. Open the browser and type *https:// <gitlab url provided>*, Enter your login details `{username}` and `{password}`, as provided.
 
 . Select Project *{gitlab_project}*. 
 
@@ -67,191 +62,64 @@ In this section, you will modify Job Template *{jobtemplate_test}* to enable web
 .. Complete the following fields with these values-
 * *URL*: `*Webhook URL* from Red Hat Ansible Tower job template {jobtemplate_test}`
 * *Secret Token*: `*Webhook Key* from Red Hat Ansible Tower job template {jobtemplate_test}`
-* *Push events*: `Select checkbox and specify *test* as branch name`
-* *Enable SSL verification*: `Uncheck checkbox`
+* *Push Events*: `Uncheck the checkbox`
+* *Merge request events*: `Check the checkbox.`
+* *Enable SSL verification*: `Uncheck the checkbox`
 . Leave the other fields unchanged and click *Add webhook* to create the webhook.
 
-== Push Changes to Gitlab Repo 
 
+== Create Merge Request.
 . On your browser tab open gitlab webUI using *Gitlab URL* and sign in with *Gitlab Username* and *Gitlab Password*.
 
 . Select *{gitlab_project}*. 
 
-. Click on *Clone* dropdown and copy *Clone with SSH* uri.
+. In the *Project Overview* menu click on *Merge Requests*.
 
-. On one of the browser tab connect to the control node with *{VSCODE_UI_URL}* and *{VSCODE_UI_PASSWORD}*.
+. Click on *New Merge request* .
 
-. Open the terminal and connect as *devops* user.
+* *Source Branch*
+** From *Select Source branch* dropdown select *test*.
 
-. Run git command to clone repository on *control* node.
+* *Target Branch*
+** From *Select target branch* dropdown select *prod*.
 
-. On the other tab open gitlab webUI using *{GITLAB_URL}* and sign in with *{GITLAB_USERNAME}* and *{GITLAB_PASSWORD}*.
+. Click on *Compare branches and continue*.
 
-. Select *{gitlab_project}*. 
+. On the next page:
+* *Title* : From test to Prod
+* *Description*: Merge Requests for populating site.yml from test branch to Prod branch.
+* *Assignee*: Press *Assign to me*.
 
-. Click on *Clone* dropdown and copy *Clone with SSH* uri.
-
-+
-[source,bash,subs="attributes,verbatim"]
-----
-[devops@control 0 ~]$ cd $HOME
-[devops@control 0 ~]$ git clone git@utility.{GUID}.{OSP_DOMAIN}:ansible/gitops-lab.git
-----
-
-. Sample Output
-
-+
-[source,bash,subs="attributes,verbatim"]
-----
-Cloning into 'gitops-lab'...
-Warning: Permanently added 'utility.{GUID}.{OSP_DOMAIN},169.47.191.71' (ECDSA) to the list of known hosts.
-remote: Enumerating objects: 258, done.
-remote: Counting objects: 100% (258/258), done.
-remote: Compressing objects: 100% (110/110), done.
-remote: Total 258 (delta 116), reused 258 (delta 116), pack-reused 0
-Receiving objects: 100% (258/258), 236.04 KiB | 0 bytes/s, done.
-Resolving deltas: 100% (116/116), done.
-----
-
-. Change into directory `$HOME/gitops-lab`.
-
-+
-[source,bash]
-----
-devops@control 0 ~]$ cd $HOME/gitops-lab
-[devops@control 0 ~/gitops-lab test ⭑|✔]$
-----
-
-. Populate content of `site.yml` with the following content.
-
-+
-----
-[devops@control 0 ~$] cat << EOF >  $HOME/gitops-lab/site.yml
----
-
-- name: Play to setup mysql server
-  hosts: appdbs
-  tasks:
-    - debug: 
-        msg: "Start Mysql server setup"
-
-    - name: Setup firewall
-      include_role:
-        name: firewall
-      vars:
-        firewall_services:
-          - mysql
-
-    - name: Setup mysql server
-      include_role:
-        name: mysql-server
-    
-    - debug: 
-        msg: "Finished Mysql server setup"
- 
-- name: Play to setup apache servers
-  hosts: apps
-  tasks:
-    - debug: 
-      msg: "Start Apache server setup"
-    
-    - name: Setup firewall
-      include_role:
-        name: firewall
-      vars:
-        firewall_services:
-          - http
-        firewall_tcp_ports:
-          - 8080
-
-    - name: Setup apache server
-      include_role:
-        name: apache
-    
-    - debug: 
-        msg: "Finished Apache server setup"
-
-- name: Play to setup Haproxy
-  hosts: frontends
-  tasks:
-    - debug: 
-      msg: "Start HAproxy server setup"
-
-    - name: Setup firewall
-      include_role:
-        name: firewall
-      vars:
-        firewall_services:
-          - http
-        firewall_tcp_ports:
-          - 5000
-
-    - name: Setup HAproxy server
-      include_role:
-        name: haproxy
-
-    - debug: 
-      msg: "Finished HAproxy server setup"
-
-...
-EOF
-----
-
-. Add the changes to gitlab repo.
-
-+
-[source,bash]
-----
-[devops@control 0 ~]$ git add site.yml
-----
-
-. Commit the changes.
-
-+
-[source,bash]
-----
-devops@control 0 ~]$ git commit -m "Populated site.yml with playbook content"
-----
-
-. Sample Output
-
-+
-[source,bash]
-----
-[test 09468a2] Populated site.yml with playbook content
- 1 file changed, 67 insertions(+)
- create mode 100644 site.yml
-----
-
-. Push the changes
-
-+
-[source,bash,subs="attributes,verbatim"]
-----
-[devops@control 0 ~]$ git push
-----
-
-. Sample Output
-
-+
-----
-Counting objects: 4, done.
-Delta compression using up to 2 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 581 bytes | 0 bytes/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-remote: 
-remote: To create a merge request for test, visit:
-remote:   {GITLAB_URL}/ansible/gitops-lab/-/merge_requests/new?merge_request%5Bsource_branch%5D=test
-remote: 
-To git@utility.{GUID}.{OSP_DOMAIN}:ansible/gitops-lab.git
-   223ba25..09468a2  test -> test
-----
-
-
+. Click on *Submit merge request* .
 
 *Image-1*
 
-image::images/03_gitlab_merge_1.png[align="center",600,300]
-image::images/03_gitlab_merge_2.png[align="center",600,300]
-image::images/03_gitlab_merge_3.png[align="center",600,300]
+image::images/03_gitlab_merge_1.png[align="center",800,400]
+
+*Image-2*
+
+image::images/03_gitlab_merge_2.png[align="center",800,400]
+
+*Image-3*
+
+image::images/03_gitlab_merge_3.png[align="center",800,400]
+
+
+== Approve Merge Request
+
+. Select *{gitlab_project}*. 
+
+. In the *Project Overview* menu click on *Merge Requests*.
+
+. Click in *Open* to list all open Merge Request.
+
+. Select *From test to Prod*.
+
+. Click on *Merge*. 
+
+. You will see a message *Merged by devops*.
+
+*Image-4*
+
+image::images/03_gitlab_merge_4.png[align="center",800,400]
+

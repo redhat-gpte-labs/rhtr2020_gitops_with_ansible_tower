@@ -20,7 +20,7 @@ As an Ansible user, you define the desired state of your infrastructure — serv
 
 *Image-1*
 
-image::images/01_iac.png[align="center",600,300]
+image::images/01_iac.png[align="center",800,400]
 
 
 == Understanding an IaC Ansible pipeline
@@ -38,4 +38,4 @@ Automation Webhooks allow you to link a Git repository and Ansible automation na
 
 *Image-2*
 
-image::images/02_webhook.png[align="center",600,300]
+image::images/02_webhook.png[align="center",800,400]

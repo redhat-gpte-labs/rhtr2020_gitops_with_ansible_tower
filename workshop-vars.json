@@ -1,6 +1,6 @@
 { 
-"username": "devops",
-"password": "test",
+"guid": "mitesh",
+"subdomain_base_suffix": "red.ops.example.com", 
 "gitlab_url": "utility.test.example.com",
 "gitlab_username": "devops",
 "gitlab_password": "test",

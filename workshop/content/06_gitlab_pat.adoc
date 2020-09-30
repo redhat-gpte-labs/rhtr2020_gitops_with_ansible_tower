@@ -1,5 +1,5 @@
 :GUID: %guid%
-:OSP_DOMAIN: %osp_cluster_dns_zone%
+:OSP_DOMAIN: %subdomain_base_suffixe%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%

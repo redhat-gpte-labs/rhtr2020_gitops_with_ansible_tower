@@ -39,7 +39,7 @@
 *Image-1*
 
 image::images/04_tower_job_status.png[align="center",800,400]
-
++
 . Verify accessing the application using testserver web url `testserver.{GUID}.{OSP_DOMAIN}`.
 
 //Image

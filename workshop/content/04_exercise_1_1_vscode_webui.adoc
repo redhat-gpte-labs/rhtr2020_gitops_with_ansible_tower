@@ -25,3 +25,53 @@
 :source-linenums-option:        
 :markup-in-source: verbatim,attributes,quotes
 :show_solution: true
+
+
+== Access VScode WebUI
+
+In this section, you will explore VScode Server webui and it's components.
+
+. To access VScode server, open new tab in your browser and type `{VSCODE_UI_URL}` & enter password *{VSCODE_UI_PASSWORD}* when prompted -
+
+
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/06_vscode_login_1.png[]
+^| Figure 1 - VScode server login page
+|===
+
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/06_vscode_login_2.png[]
+^| Figure 2 - VScode Server WebUI
+|===
+
+
+
+== VScode Terminal
+
+
+In this section, you will explore option to launch terminal in VScode server webUI.
+
+. Click option *Terminal* from menu bar
+. Select New Terminal
+
+
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/06_vscode_terminal.png[]
+^| Figure 3 - VScode Server Terminal
+|===
+
+== VScode Directory
+
+In this section, you will explore option to directory in VScode server webUI.
+
+. Click option *File* from menu bar
+. Select Open
+
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/06_vscode_open_directory.png[]
+^| Figure 3 - VScode Server Terminal
+|===

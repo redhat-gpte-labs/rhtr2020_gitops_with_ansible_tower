@@ -4,13 +4,13 @@ modules:
   activate:
     - 01_introduction
     - 02_overview 
-    - 03_explore_control
-    - 04_explore_tower
-    - 05_explore_gitlab
-    - 06_gitlab_pat
-    - 07_tower_gitlab_pat_cred
-    - 08_webhook_push_request
-    - 09_verify_push_request
-    - 10_webhook_merge_request
-    - 11_verify_merge_request
-    - 12_grade_and_solve
+    - 03_explore_0_1_vscode_webui
+    - 03_explore_0_2_tower_webui
+    - 03_explore_0_3_gitlab_webui
+    - 04_exercise_1_1_gitlab_pat
+    - 04_exercise_1_2_storing_pat_in_ansible_tower
+    - 04_exercise_2_1_webhook_for_push_event
+    - 04_exercise_2_2_verify_push_event
+    - 04_exercise_3_1_webhook_for_merge_event
+    - 04_exercise_3_2_verify_eerge_event
+    - 05_grade_and_solve

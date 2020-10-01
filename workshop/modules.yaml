@@ -5,33 +5,33 @@ modules:
     exit_sign: Overview
   02_overview:
     name: Overview
-    exit_sign: Explore Control Node
-  03_explore_control:
-    name: Explore Control Node
-    exit_sign: Explore RedHat Ansible Tower Web UI
-  04_explore_tower:
-    name: Explore RedHat Ansible Tower Web UI
-    exit_sign: Explore Gitlab Web UI
-  05_explore_gitlab:
-    name: Explore Gitlab Web UI
-    exit_sign: Create Gitlab personal access token
-  06_gitlab_pat:
-    name: Create Gitlab personal access token
-    exit_sign: Prepare Tower to use GitLab Personal Access Token
-  07_tower_gitlab_pat_cred: 
-    name: Prepare Tower to use GitLab Personal Access Token
-    exit_sign: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Push Request
-  08_webhook_push_request:
-    name: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Push Request
-    exit_sign: Verify Push Request webhook
-  09_verify_push_request:
-    name: Verify Push Request webhook
-    exit_sign: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Merge Request
-  10_webhook_merge_request:
-    name: Setup Ansible Tower and Gitlab Repo to use Automation Webhooks for Merge Request
-    exit_sign: Verfiy merge request webhook
-  11_verify_merge_request:
-    name: Verfiy merge request webhook
-    exit_sign: Grade and solve
-  12_grade_and_solve:
-    name: Grade and solve
+    exit_sign: Explore 0.1
+  03_explore_0_1_vscode_webui:
+    name: Explore 0.1 - VScode WebUI
+    exit_sign: Explore 0.2
+  03_explore_0_2_tower_webui:
+    name: Explore 0.2 - Ansible Tower WebUI
+    exit_sign: Explore 0.3
+  03_explore_0_3_gitlab_webui:
+    name: Explore 0.3 - Gitlab WebUI
+    exit_sign: Exercise 1.1
+  04_exercise_1_1_gitlab_pat:
+    name: Exercise 1.1 - Gitlab PAT
+    exit_sign: Exercise 1.2
+  04_exercise_1_2_storing_pat_in_ansible_tower: 
+    name: Exercise 1.2 - Stroing PAT in Ansible Tower
+    exit_sign: Exercise 2.1
+  04_exercise_2_1_webhook_for_push_event:
+    name: Exercise 2.1 - Webhook For Push Event
+    exit_sign: Exercise 2.2
+  04_exercise_2_2_verify_push_event:
+    name: Exercise 2.2 - Verify Push Event
+    exit_sign: Exercise 3.1
+  04_exercise_3_1_webhook_for_merge_event:
+    name: Exercise 3.1 - Webhook For Merge Event
+    exit_sign: Exercise 3.2
+  04_exercise_3_2_verify_eerge_event:
+    name: Exercise 3.2 - Verify Merge Event
+    exit_sign: Grade
+  05_grade_and_solve:
+    name: Grade And Solve

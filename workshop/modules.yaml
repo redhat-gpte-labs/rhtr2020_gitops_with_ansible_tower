@@ -2,7 +2,7 @@
 modules:
   01_introduction:
     name: GitOps with RedHat Ansible Tower
-    exit_sign: Understanding Infrastructures-as-Code
+    exit_sign: Overview
   02_overview:
     name: Overview
     exit_sign: Explore Control Node

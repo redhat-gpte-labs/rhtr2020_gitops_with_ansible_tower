@@ -43,6 +43,9 @@ In this section, you will create  `GitLab Personal Access Token` credential requ
 * *TOKEN*: `Copy token from gitlab webui`
 * Click *SAVE* to create the credential.
 
-*Image-1*
 
-image::images/03_gitlab_pat_2.png[align="center",800,400]
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/03_gitlab_pat_2.png[]
+^| Figure 1 - Gitlab PAT 2
+|===

@@ -52,9 +52,12 @@ In this section, you will modify Job Template *{jobtemplate_test}* to enable web
 
 . Click *SAVE* to create the job template.
 
-*Image-1*
 
-image::images/04_tower_webhook.png[align="center",800,400]
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/04_tower_webhook.png[]
+^| Figure 1 - Ansible Tower WebHook
+|===
 
 == Preparing Gitlab repo webhook for Push Request.
 
@@ -73,10 +76,11 @@ image::images/04_tower_webhook.png[align="center",800,400]
 * *Enable SSL verification*: `Uncheck checkbox`
 . Leave the other fields unchanged and click *Add webhook* to create the webhook.
 
-*Image-2*
-
-image::images/03_gitlab_webhook.png[align="center",800,400]
-
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/03_gitlab_webhook.png[]
+^| Figure 2 - Gitlab WebHook
+|===
 
 == Push Changes to Gitlab Repo 
 

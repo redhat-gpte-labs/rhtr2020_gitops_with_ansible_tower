@@ -46,10 +46,17 @@ In this section, you will create Gitlab personal access token.
 
 . Save the personal access token somewhere safe. If you navigate away or refresh your page, and you did not save the token, you must create a new one.
 
-*Image-1*
 
-image::images/03_gitlab_pat_1.png[align="center",800,400]
 
-*Image-2*
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/03_gitlab_pat_1.png[]
+^| Figure 1 - Gitlab PAT 1
+|===
 
-image::images/03_gitlab_pat_2.png[align="center",800,400]
+
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/03_gitlab_pat_2.png[]
+^| Figure 2 - Gitlab PAT 2
+|===

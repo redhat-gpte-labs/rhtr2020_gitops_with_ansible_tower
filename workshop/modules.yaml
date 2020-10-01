@@ -30,7 +30,7 @@ modules:
   04_exercise_4_1_webhook_for_merge_event:
     name: Exercise 4.1 - Webhook For Merge Event
     exit_sign: Exercise 4.2
-  04_exercise_4_2_verify_eerge_event:
+  04_exercise_4_2_verify_merge_event:
     name: Exercise 4.2 - Verify Merge Event
     exit_sign: Grade
   05_grade_and_solve:

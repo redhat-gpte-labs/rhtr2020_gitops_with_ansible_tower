@@ -36,11 +36,19 @@
 
 . Click on the `$JOBID-App Deployer - Test Env` to see the details. 
 
-image::images/04_tower_job_status.png[align="center",800,400]
+
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/04_tower_job_status.png[]
+^| Figure 1 - Ansible Tower Job Status
+|===
+
 
 . Verify accessing the application using testserver web url `testserver.{GUID}.{OSP_DOMAIN}`.
-
-//Image
-
 . Enter `root` in the box to then click `Submit`. 
 
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/05_test_smoke_test.png[]
+^| Figure 2 - Smoke Test
+|===

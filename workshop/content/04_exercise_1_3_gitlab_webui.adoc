@@ -33,6 +33,8 @@ In this section you will explore Gitlab UI.
 Open browser and type *{{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAME}` and `{GITLAB_PASSWORD}`, as provided.
 
 
-*Image-1*
-
-image::images/03_gitlab_login.png[align="center",800,400]
+[cols="1a",grid=none,width=75%]
+|===
+^| image::images/03_gitlab_login.png[]
+^| Figure 1 - Gitlab WebUI
+|===

@@ -92,18 +92,23 @@ In this section, you will modify Job Template *{jobtemplate_prod}* to enable web
 
 . Click on *Submit merge request* .
 
-*Image-1*
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/03_gitlab_merge_1.png[]
+^| Figure 1 - Merge Envent
+|===
 
-image::images/03_gitlab_merge_1.png[align="center",800,400]
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/03_gitlab_merge_2.png[]
+^| Figure 2 - Merge Envent
+|===
 
-*Image-2*
-
-image::images/03_gitlab_merge_2.png[align="center",800,400]
-
-*Image-3*
-
-image::images/03_gitlab_merge_3.png[align="center",800,400]
-
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/03_gitlab_merge_3.png[]
+^| Figure 3 - Merge Envent
+|===
 
 == Approve Merge Request
 
@@ -119,7 +124,9 @@ image::images/03_gitlab_merge_3.png[align="center",800,400]
 
 . You will see a message *Merged by devops*.
 
-*Image-4*
 
-image::images/03_gitlab_merge_4.png[align="center",800,400]
-
+[cols="1a",grid=none,width=80%]
+|===
+^| image::images/03_gitlab_merge_4.png[]
+^| Figure 3 - Merge Envent
+|===

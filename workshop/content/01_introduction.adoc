@@ -17,7 +17,7 @@ Ansible is a prime example of a tool that enables organizations to apply IaC tec
 
 As an Ansible user, you define the desired state of your infrastructure — servers, cloud resources, networking — by using playbooks and roles that are expressed in YAML. 
 
-[frame=none]
+[grid=none]
 |===
 ^a| image::images/01_iac.png[align="center",800,400]
 ^| Figure-2 : Automation Webhooks
@@ -39,7 +39,7 @@ Automation Webhooks were introduced to Ansible Tower v3.6 as part of the Ansible
 
 Automation Webhooks allow you to link a Git repository and Ansible automation natively. Once a repo link is set up, Ansible catches events (Git commits) from the Git system (GitHub, GitHub Enterprise, GitLab). It then uses those events to trigger automation jobs to update projects, manage inventories, and perform deployments, all without requiring yet another tool such as Jenkins.
 
-[frame=none]
+[grid=none]
 |===
 ^a| image::images/02_webhook.png[align="center",800,400]
 ^| Figure-2 : Automation Webhooks

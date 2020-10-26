@@ -19,7 +19,7 @@ modules:
     name: Exercise 2.1 - Gitlab PAT
     exit_sign: Exercise 2.2
   04_exercise_2_2_storing_pat_in_ansible_tower: 
-    name: Exercise 2.2 - Stroing PAT in Ansible Tower
+    name: Exercise 2.2 - Storing PAT in Ansible Tower
     exit_sign: Exercise 3.1
   04_exercise_3_1_webhook_for_push_event:
     name: Exercise 3.1 - Webhook For Push Event

@@ -53,7 +53,7 @@ In this section, you will modify Job Template *{jobtemplate_prod}* to enable web
 
 . Sign In to Gitlab web UI.
 
-. Open the browser and type *https:// <gitlab url provided>*, Enter your login details `{username}` and `{password}`, as provided.
+. Open the browser and type *{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAME}` and `{GITLAB_PASSWORD}`, as provided.
 
 . Select Project *{gitlab_project}*. 
 

@@ -1,5 +1,5 @@
 :GUID: %guid%
-:OSP_DOMAIN: %subdomain_base_suffix%
+:OSP_DOMAIN: %osp_cluster_dns_zone%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_PASSWORD: %gitlab_password%
@@ -36,8 +36,7 @@
 
 . Click on the `{jobtemplate_prod}` to see the details. 
 
-. Verify accessing the application using testserver web url `testserver.{GUID}.{OSP_DOMAIN}`.
+. Verify accessing the application using frontend web url `frontend.{GUID}.{OSP_DOMAIN}`.
 
-//Image
 
 . Enter `root` in the box to then click `Submit`. 

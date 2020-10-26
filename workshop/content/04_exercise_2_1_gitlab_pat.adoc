@@ -32,7 +32,7 @@ In this section, you will create Gitlab personal access token.
 
 . Open the browser and type *{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAME}` and `{GITLAB_PASSWORD}`, as provided.
 
-. In the upper-right corner, click your *avatar* and select *Settings*.
+. In the upper-right corner, click on your *avatar* and select *Settings*.
 
 . On the *User Settings* menu, select *Access Tokens*.
 

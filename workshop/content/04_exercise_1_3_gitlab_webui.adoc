@@ -30,7 +30,7 @@ In this section you will explore Gitlab UI.
 
 . Sign in to Gitlab web UI.
 +
-Open browser and type *{{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAME}` and `{GITLAB_PASSWORD}`, as provided.
+Open browser and type *{GITLAB_URL}*, Enter your login details `{GITLAB_USERNAME}` and `{GITLAB_PASSWORD}`, as provided.
 
 
 [cols="1a",grid=none,width=75%]

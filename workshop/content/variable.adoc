@@ -1,7 +1,8 @@
 :GUID: %guid%
-:OSP_DOMAIN: %dns_zone%
+:OSP_DOMAIN: %dnz_zone%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
+:GITLAB_HOST: %gitlab_hostname%
 :GITLAB_PASSWORD: %gitlab_password%
 :TOWER_URL: %tower_url%
 :TOWER_ADMIN_USER: %tower_admin_user%
@@ -25,27 +26,3 @@
 :source-linenums-option:        
 :markup-in-source: verbatim,attributes,quotes
 :show_solution: true
-
-
-In this section, you will create  `GitLab Personal Access Token` credential required to enable webhook.
-
-. Sign in to the Ansible Tower web UI.
-
-. In the *RESOURCES* section of the navigation menu, click *Credentials*.
-
-. Click *+* to add a new credential.
-
-. On the next screen, complete the following fields with these values:
-* *NAME*: `{credential_git_token}`
-* *DESCRIPTION*:  `Gitlab Personal Access Token`
-* *ORGANIZATION*: `Default`
-* *TYPE*: `GitLab Personal Access Token`
-* *TOKEN*: `Copy token from gitlab webui`
-* Click *SAVE* to create the credential.
-
-
-[cols="1a",grid=none,width=80%]
-|===
-^| image::images/03_gitlab_pat_2.png[]
-^| Figure 1 - Gitlab PAT 2
-|===

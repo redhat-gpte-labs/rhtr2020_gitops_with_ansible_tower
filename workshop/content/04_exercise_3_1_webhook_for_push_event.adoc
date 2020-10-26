@@ -238,6 +238,7 @@ devops@control 0 ~]$ git commit -m "Populated site.yml with playbook content"
 . Push the changes
 
 +
+
 [source,bash,subs="attributes,verbatim"]
 ----
 [devops@control 0 ~]$ git push
@@ -246,6 +247,8 @@ devops@control 0 ~]$ git commit -m "Populated site.yml with playbook content"
 . Sample Output
 
 +
+
+[source,bash,subs="attributes,verbatim"]
 ----
 Counting objects: 4, done.
 Delta compression using up to 2 threads.

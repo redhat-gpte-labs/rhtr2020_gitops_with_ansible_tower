@@ -1,5 +1,5 @@
 :GUID: %guid%
-:OSP_DOMAIN: %dnz_zone%
+:OSP_DOMAIN: dynamic.opentlc.com
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
 :GITLAB_HOST: %gitlab_hostname%

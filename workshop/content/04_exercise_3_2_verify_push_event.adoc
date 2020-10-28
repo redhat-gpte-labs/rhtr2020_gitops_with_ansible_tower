@@ -45,7 +45,7 @@
 |===
 
 
-. Verify accessing the application using testserver web url `testserver.{GUID}.{OSP_DOMAIN}`.
+. Verify accessing the application using testserver web url `http://testserver.{GUID}.{OSP_DOMAIN}`.
 . Enter `root` in the box to then click `Submit`. 
 
 [cols="1a",grid=none,width=80%]

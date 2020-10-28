@@ -1,9 +1,9 @@
 :GUID: %guid%
-:OSP_DOMAIN: dynamic.opentlc.com
+:OSP_DOMAIN: %subdomain_base_suffix%
 :GITLAB_URL: %gitlab_url%
 :GITLAB_USERNAME: %gitlab_username%
-:GITLAB_HOST: %gitlab_hostname%
 :GITLAB_PASSWORD: %gitlab_password%
+:GITLAB_HOST: %gitlab_hostname%
 :TOWER_URL: %tower_url%
 :TOWER_ADMIN_USER: %tower_admin_user%
 :TOWER_ADMIN_PASSWORD: %tower_admin_password%

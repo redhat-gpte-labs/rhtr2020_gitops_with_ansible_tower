@@ -2,7 +2,7 @@
 
 
 
-= Bookbag Template
+= GitOps with Ansible Tower Template
 
 NOTE: This project is based on OpenShift Homeroom: https://github.com/openshift-homeroom.
 This repository is based on https://github.com/openshift-homeroom/lab-asciidoc-sample.
